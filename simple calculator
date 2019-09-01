@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <script type="text/javascript">
+      function displaynum(num1) {
+        calcform.text1.value=calcform.text1.value+num1;
+      }
+      function clean() {
+         calcform.text1.value = "";
+      }
+      function equal() {
+        var exp = calcform.text1.value;
+        if (exp) {
+          calcform.text1.value = eval(exp);
+        }
+
+      }
+function back() {var exp = calcform.text1.value;
+if (exp) {
+  calcform.text1.value = exp.substring(0,exp.length-1);
+
+}
+}
+    </script>
+
+
+
+  </head>
+  <body>
+    <form name="calcform">
+      <input type="text" name="text1" value=""><br>
+      <input type="button" style="width:50" name="clearbutton" value="c" onclick="clean()">
+      <input type="button" name="backbutton" value="<" onclick="back()">
+      <input type="button" name="divbutton" value="/" onclick="displaynum(divbutton.value)">
+      <input type="button" name="mulbutton" value="*" onclick="displaynum(mulbutton.value)"><br>
+      <input type="button" name="button7" value="7" onclick="displaynum(button7.value)">
+      <input type="button" name="button8" value="8" onclick="displaynum(button8.value)">
+      <input type="button" name="button9" value="9" onclick="displaynum(button9.value)">
+      <input type="button" name="addbutton" value="+" onclick="displaynum(addbutton.value)"><br>
+      <input type="button" name="button4" value="4" onclick="displaynum(button4.value)">
+      <input type="button" name="button5" value="5" onclick="displaynum(button5.value)">
+      <input type="button" name="button6" value="6" onclick="displaynum(button6.value)">
+      <input type="button" name="subbutton" value="-" onclick="displaynum(subbutton.value)"> <br>
+      <input type="button" name="button1" value="1" onclick="displaynum(button1.value)">
+      <input type="button" name="button2" value="2" onclick="displaynum(button2.value)">
+      <input type="button" name="button3" value="3" onclick="displaynum(button3.value)">
+      <input type="button" name="equalsbutton" value="=" onclick="equal()"><br>
+      <input type="button" name="button0" value="0" onclick="displaynum(button0.value)">
+      <input type="button" name="decimal" value="." onclick="displaynum(decimal.value)">
+
+
+
+
+  </form>
+  </body>
+</html>
